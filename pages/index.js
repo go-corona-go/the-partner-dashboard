@@ -1,7 +1,8 @@
+import Container from '@material-ui/core/Container'
 import Head from 'next/head'
 
 const Home = () => (
-  <div className="container">
+  <Container>
     <Head>
       <title>WFTO: Partner App</title>
       <link rel="icon" href="/favicon.ico" />
@@ -152,7 +153,7 @@ const Home = () => (
         box-sizing: border-box;
       }
     `}</style>
-  </div>
+  </Container>
 )
 
 export default Home
