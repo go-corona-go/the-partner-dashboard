@@ -1,5 +1,5 @@
-import { ApolloClient, InMemoryCache, HttpLink } from 'apollo-boost'
-import fetch from 'isomorphic-unfetch'
+import { ApolloClient, InMemoryCache, HttpLink } from 'apollo-boost';
+import fetch from 'isomorphic-unfetch';
 
 export default function createApolloClient(initialState, ctx) {
   // The `ctx` (NextPageContext) will only be present on the server.
@@ -7,10 +7,10 @@ export default function createApolloClient(initialState, ctx) {
   return new ApolloClient({
     ssrMode: Boolean(ctx),
     link: new HttpLink({
-      uri: 'https://wfto-covid19-dev.herokuapp.com/console/api-explorer', // Server URL (must be absolute)
+      uri: 'https://wfto-covid19-dev.herokuapp.com/v1/graphql', // Server URL (must be absolute)
       credentials: 'same-origin', // Additional fetch() options like `credentials` or `headers`
       fetch,
     }),
     cache: new InMemoryCache().restore(initialState),
-  })
+  });
 }
