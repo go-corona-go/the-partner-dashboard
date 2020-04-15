@@ -89,153 +89,155 @@ function SellerDetailsForm() {
       <h1 className={classes.formHeading}>Partner Contact Details</h1>
       <p>* Required</p>
       <form noValidate autoComplete="off" onSubmit={submitFormDetails}>
-        <Grid container spacing={3}>
-          <Grid item xs={12} sm={12} lg={12}>
-            <TextField
-              required
-              id="name"
-              label="Name of the member/partner"
-              placeholder="Name"
-              className={classes.input}
-              value={values.name}
-              onChange={handleTextFieldChange('name')}
-            />
+        <Grid>
+          <Grid container spacing={3}>
+            <Grid item xs={12} sm={12} lg={12}>
+              <TextField
+                required
+                id="name"
+                label="Name of the member/partner"
+                placeholder="Name"
+                className={classes.input}
+                value={values.name}
+                onChange={handleTextFieldChange('name')}
+              />
+            </Grid>
+            <Grid item xs={12} sm={12} lg={12}>
+              <TextField
+                required
+                id="address"
+                label="Address"
+                placeholder="Address.."
+                className={classes.input}
+                value={values.address}
+                onChange={handleTextFieldChange('address')}
+              />
+            </Grid>
+            <Grid item xs={12} sm={12} lg={12}>
+              <TextField
+                required
+                id="country"
+                label="Country"
+                placeholder="Country.."
+                className={classes.input}
+                value={values.country}
+                onChange={handleTextFieldChange('country')}
+              />
+            </Grid>
+            <Grid item xs={12} sm={12} lg={12}>
+              <TextField
+                required
+                id="principal-contact"
+                label="Principal Contact Person"
+                placeholder="Principal Contact Person Name.."
+                className={classes.input}
+                value={values.principalContact}
+                onChange={handleTextFieldChange('principalContact')}
+              />
+            </Grid>
+            <Grid item xs={12} sm={12} lg={12}>
+              <TextField
+                required
+                id="phone-number"
+                label="Phone Number with Country Code"
+                placeholder="Phone Number with Country Code.."
+                className={classes.input}
+                value={values.phoneNumber}
+                onChange={handleTextFieldChange('phoneNumber')}
+              />
+            </Grid>
+            <Grid item xs={12} sm={12} lg={12}>
+              <TextField
+                required
+                id="email-address"
+                label="Email Address"
+                placeholder="Email Address.."
+                className={classes.input}
+                value={values.emailAddress}
+                onChange={handleTextFieldChange('emailAddress')}
+              />
+            </Grid>
+            <Grid item xs={12} sm={12} lg={12}>
+              <TextField
+                id="whatsapp"
+                label="WhatsApp"
+                placeholder="Whatsapp number.."
+                className={classes.input}
+                value={values.whatsappNumber}
+                onChange={handleTextFieldChange('whatsappNumber')}
+              />
+            </Grid>
+            <Grid item xs={12} sm={12} lg={12}>
+              <TextField
+                id="skype"
+                label="Skype"
+                placeholder="Skype.."
+                className={classes.input}
+                value={values.skype}
+                onChange={handleTextFieldChange('skype')}
+              />
+            </Grid>
+            <Grid item xs={12} sm={12} lg={12}>
+              <TextField
+                id="viber"
+                label="Viber"
+                placeholder="Viber.."
+                className={classes.input}
+                value={values.viber}
+                onChange={handleTextFieldChange('viber')}
+              />
+            </Grid>
+            <Grid item xs={12} sm={12} lg={12}>
+              <TextField
+                id="fb-messenger"
+                label="FB Messenger"
+                placeholder="FB Messenger.."
+                className={classes.input}
+                value={values.fbMessenger}
+                onChange={handleTextFieldChange('fbMessenger')}
+              />
+            </Grid>
+            <Grid item>
+              <FormControl component="fieldset" className={classes.radioGrp}>
+                <FormLabel required component="legend">
+                  Member of Fair Trade
+                </FormLabel>
+                <RadioGroup
+                  aria-label="Member of Fair Trade"
+                  name="member-of-fair-trade"
+                  value={orgDetails}
+                  onChange={handleRadioButtonChange}
+                >
+                  <FormControlLabel
+                    value="WFTO"
+                    control={<Radio />}
+                    label="WFTO"
+                  />
+                  <FormControlLabel
+                    value="Country Fair Trade Network"
+                    control={<Radio />}
+                    label="Country Fair Trade Network"
+                  />
+                  <FormControlLabel
+                    value="Fair Trade Enterprise but not a member of WFTO nor Country Network"
+                    control={<Radio />}
+                    label="Fair Trade Enterprise but not a member of WFTO nor Country Network"
+                  />
+                  <FormControlLabel
+                    value="Other"
+                    control={<Radio />}
+                    label="Other"
+                  />
+                </RadioGroup>
+              </FormControl>
+            </Grid>
           </Grid>
-          <Grid item xs={12} sm={12} lg={12}>
-            <TextField
-              required
-              id="address"
-              label="Address"
-              placeholder="Address.."
-              className={classes.input}
-              value={values.address}
-              onChange={handleTextFieldChange('address')}
-            />
-          </Grid>
-          <Grid item xs={12} sm={12} lg={12}>
-            <TextField
-              required
-              id="country"
-              label="Country"
-              placeholder="Country.."
-              className={classes.input}
-              value={values.country}
-              onChange={handleTextFieldChange('country')}
-            />
-          </Grid>
-          <Grid item xs={12} sm={12} lg={12}>
-            <TextField
-              required
-              id="principal-contact"
-              label="Principal Contact Person"
-              placeholder="Principal Contact Person Name.."
-              className={classes.input}
-              value={values.principalContact}
-              onChange={handleTextFieldChange('principalContact')}
-            />
-          </Grid>
-          <Grid item xs={12} sm={12} lg={12}>
-            <TextField
-              required
-              id="phone-number"
-              label="Phone Number with Country Code"
-              placeholder="Phone Number with Country Code.."
-              className={classes.input}
-              value={values.phoneNumber}
-              onChange={handleTextFieldChange('phoneNumber')}
-            />
-          </Grid>
-          <Grid item xs={12} sm={12} lg={12}>
-            <TextField
-              required
-              id="email-address"
-              label="Email Address"
-              placeholder="Email Address.."
-              className={classes.input}
-              value={values.emailAddress}
-              onChange={handleTextFieldChange('emailAddress')}
-            />
-          </Grid>
-          <Grid item xs={12} sm={12} lg={12}>
-            <TextField
-              id="whatsapp"
-              label="WhatsApp"
-              placeholder="Whatsapp number.."
-              className={classes.input}
-              value={values.whatsappNumber}
-              onChange={handleTextFieldChange('whatsappNumber')}
-            />
-          </Grid>
-          <Grid item xs={12} sm={12} lg={12}>
-            <TextField
-              id="skype"
-              label="Skype"
-              placeholder="Skype.."
-              className={classes.input}
-              value={values.skype}
-              onChange={handleTextFieldChange('skype')}
-            />
-          </Grid>
-          <Grid item xs={12} sm={12} lg={12}>
-            <TextField
-              id="viber"
-              label="Viber"
-              placeholder="Viber.."
-              className={classes.input}
-              value={values.viber}
-              onChange={handleTextFieldChange('viber')}
-            />
-          </Grid>
-          <Grid item xs={12} sm={12} lg={12}>
-            <TextField
-              id="fb-messenger"
-              label="FB Messenger"
-              placeholder="FB Messenger.."
-              className={classes.input}
-              value={values.fbMessenger}
-              onChange={handleTextFieldChange('fbMessenger')}
-            />
-          </Grid>
-          <Grid item>
-            <FormControl component="fieldset" className={classes.radioGrp}>
-              <FormLabel required component="legend">
-                Member of Fair Trade
-              </FormLabel>
-              <RadioGroup
-                aria-label="Member of Fair Trade"
-                name="member-of-fair-trade"
-                value={orgDetails}
-                onChange={handleRadioButtonChange}
-              >
-                <FormControlLabel
-                  value="WFTO"
-                  control={<Radio />}
-                  label="WFTO"
-                />
-                <FormControlLabel
-                  value="Country Fair Trade Network"
-                  control={<Radio />}
-                  label="Country Fair Trade Network"
-                />
-                <FormControlLabel
-                  value="Fair Trade Enterprise but not a member of WFTO nor Country Network"
-                  control={<Radio />}
-                  label="Fair Trade Enterprise but not a member of WFTO nor Country Network"
-                />
-                <FormControlLabel
-                  value="Other"
-                  control={<Radio />}
-                  label="Other"
-                />
-              </RadioGroup>
-            </FormControl>
-          </Grid>
+          <div className={classes.btnStyle}>
+            <Button variant="contained" color="primary" type="submit">
+              Save Details
+            </Button>
+          </div>
         </Grid>
-        <div className={classes.btnStyle}>
-          <Button variant="contained" color="primary" type="submit">
-            Save Details
-          </Button>
-        </div>
       </form>
     </Card>
   );
